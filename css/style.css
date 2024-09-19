@@ -1,0 +1,133 @@
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "header header"
+                          "nav content";
+    grid-template-columns: 0px auto;
+    grid-template-rows: 60px auto;
+}
+
+.header {
+    background-color: black;
+    color: #fff;
+    grid-area: header;
+}
+
+.navbar {
+    background-color: orange;
+    grid-area: nav;
+}
+
+.content {
+    background-color: aqua;
+    grid-area: content;
+    display: grid;
+    grid-template-areas: "opm card card"
+                         "opm graf mapa"
+                         "opm graf mapa";
+    grid-template-columns: 200px 1fr .7fr;
+    grid-template-rows: 100px 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.content .opm__pendentes {
+    background-color: gray;
+    grid-area: opm;
+}
+
+.content .dash__card {
+    grid-area: card;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.content .dash__card .card__total {
+    background-color: purple;
+    border: 1px dashed greenyellow;
+}
+
+.content .dash__graf {
+    grid-area: graf;
+    display: grid;
+    grid-template-areas: "cpi1 cpi6"
+                          "porc porc";
+    grid-template-columns: .6fr 1fr;
+    gap: 10px;
+}
+
+.content .dash__graf .cpi {
+}
+
+.content .dash__graf .container__graficos {
+    border: 1px solid navy;
+    height: 90%;
+    display: flex;
+}
+
+
+.content .dash__graf .cpi p {
+    border: 1px dashed dodgerblue;
+    margin: 0;
+    height: 10%;
+}
+
+.content .dash__graf .cpi__um {
+    border: 1px dashed whitesmoke;
+    grid-area: cpi1;
+}
+
+.content .dash__graf .cpi__seis {
+    border: 1px dashed whitesmoke;
+    grid-area: cpi6;
+}
+
+.content .dash__graf .porcentagem {
+    border: 1px dashed whitesmoke;
+    grid-area: porc;
+}
+
+
+.content .dash__mapa {
+    background-color: greenyellow;
+    grid-area: mapa;
+}
+
+
+/** Grafico de Coluna */
+.grafico__coluna {
+    border: 1px dashed blueviolet;
+    width: 60px;
+    height: 100%;
+    display: grid;
+    grid-template-areas: "ten sgt cb" "cidade cidade cidade";
+    grid-template-rows: 80% 20%;
+}
+
+.coluna__ten {
+    grid-area: ten;
+}
+
+.coluna__sgt {
+    grid-area: sgt;
+}
+
+.coluna__cbsd {
+    grid-area: cb;
+}
+
+.coluna__cidade {
+    grid-area: cidade;
+}
+
+.coluna {
+    border: 1px doted green;
+    width: 20px;
+    height: 100%;
+    color: red;
+    background-color: yellowgreen;
+    display: flex;
+    align-items: flex-end;
+}
